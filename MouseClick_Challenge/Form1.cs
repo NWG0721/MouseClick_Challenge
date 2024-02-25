@@ -62,7 +62,7 @@ namespace MouseClick_Challenge
             else
             {
                 timer1.Enabled = false;
-                MessageBox.Show("شما باختیت");
+                MessageBox.Show("شما باختی");
                 //Process.Start("CMD.exe","shutdown");
                 generator();
             }   
@@ -80,8 +80,9 @@ namespace MouseClick_Challenge
             lblSecond.Text = (Second + 1).ToString();
             if (Second == 60)
             {
-                lblSecond.Text = "00";
-                Min++;
+                timer1.Enabled = false;
+                MessageBox.Show("شما باختی");
+                generator();
             }
         }
 
