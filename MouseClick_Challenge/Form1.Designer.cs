@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panHeader = new System.Windows.Forms.Panel();
+            this.button209 = new System.Windows.Forms.Button();
             this.btnViewCode = new System.Windows.Forms.Button();
             this.lblCountOfTargets = new System.Windows.Forms.Label();
             this.lblCounter = new System.Windows.Forms.Label();
@@ -250,7 +251,6 @@
             this.btmMain = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.button209 = new System.Windows.Forms.Button();
             this.panHeader.SuspendLayout();
             this.panMain.SuspendLayout();
             this.SuspendLayout();
@@ -273,6 +273,18 @@
             this.panHeader.Size = new System.Drawing.Size(984, 118);
             this.panHeader.TabIndex = 0;
             // 
+            // button209
+            // 
+            this.button209.Font = new System.Drawing.Font("DirtyBoy", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button209.ForeColor = System.Drawing.Color.Coral;
+            this.button209.Location = new System.Drawing.Point(369, 60);
+            this.button209.Name = "button209";
+            this.button209.Size = new System.Drawing.Size(195, 42);
+            this.button209.TabIndex = 13;
+            this.button209.Text = "Re generate";
+            this.button209.UseVisualStyleBackColor = true;
+            this.button209.Click += new System.EventHandler(this.button209_Click);
+            // 
             // btnViewCode
             // 
             this.btnViewCode.Font = new System.Drawing.Font("DirtyBoy", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -291,7 +303,7 @@
             this.lblCountOfTargets.Dock = System.Windows.Forms.DockStyle.Right;
             this.lblCountOfTargets.Font = new System.Drawing.Font("DirtyBoy", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCountOfTargets.ForeColor = System.Drawing.Color.Lime;
-            this.lblCountOfTargets.Location = new System.Drawing.Point(573, 28);
+            this.lblCountOfTargets.Location = new System.Drawing.Point(589, 28);
             this.lblCountOfTargets.Name = "lblCountOfTargets";
             this.lblCountOfTargets.Size = new System.Drawing.Size(284, 50);
             this.lblCountOfTargets.TabIndex = 11;
@@ -301,11 +313,11 @@
             // 
             this.lblCounter.AutoSize = true;
             this.lblCounter.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lblCounter.Font = new System.Drawing.Font("DirtyBoy", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCounter.Font = new System.Drawing.Font("Xolonium", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCounter.ForeColor = System.Drawing.Color.PaleGreen;
-            this.lblCounter.Location = new System.Drawing.Point(857, 28);
+            this.lblCounter.Location = new System.Drawing.Point(873, 28);
             this.lblCounter.Name = "lblCounter";
-            this.lblCounter.Size = new System.Drawing.Size(127, 50);
+            this.lblCounter.Size = new System.Drawing.Size(111, 41);
             this.lblCounter.TabIndex = 10;
             this.lblCounter.Text = "000";
             // 
@@ -313,11 +325,11 @@
             // 
             this.lblSecond.AutoSize = true;
             this.lblSecond.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblSecond.Font = new System.Drawing.Font("DirtyBoy", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSecond.Font = new System.Drawing.Font("Xolonium", 27.75F, System.Drawing.FontStyle.Bold);
             this.lblSecond.ForeColor = System.Drawing.Color.PaleGreen;
-            this.lblSecond.Location = new System.Drawing.Point(282, 28);
+            this.lblSecond.Location = new System.Drawing.Point(265, 28);
             this.lblSecond.Name = "lblSecond";
-            this.lblSecond.Size = new System.Drawing.Size(92, 50);
+            this.lblSecond.Size = new System.Drawing.Size(80, 41);
             this.lblSecond.TabIndex = 7;
             this.lblSecond.Text = "00";
             // 
@@ -325,11 +337,11 @@
             // 
             this.lblColumn2.AutoSize = true;
             this.lblColumn2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblColumn2.Font = new System.Drawing.Font("DirtyBoy", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblColumn2.Font = new System.Drawing.Font("Xolonium", 27.75F, System.Drawing.FontStyle.Bold);
             this.lblColumn2.ForeColor = System.Drawing.Color.PaleGreen;
-            this.lblColumn2.Location = new System.Drawing.Point(247, 28);
+            this.lblColumn2.Location = new System.Drawing.Point(235, 28);
             this.lblColumn2.Name = "lblColumn2";
-            this.lblColumn2.Size = new System.Drawing.Size(35, 50);
+            this.lblColumn2.Size = new System.Drawing.Size(30, 41);
             this.lblColumn2.TabIndex = 6;
             this.lblColumn2.Text = ":";
             // 
@@ -337,11 +349,11 @@
             // 
             this.lblMinute.AutoSize = true;
             this.lblMinute.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblMinute.Font = new System.Drawing.Font("DirtyBoy", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMinute.Font = new System.Drawing.Font("Xolonium", 27.75F, System.Drawing.FontStyle.Bold);
             this.lblMinute.ForeColor = System.Drawing.Color.PaleGreen;
             this.lblMinute.Location = new System.Drawing.Point(155, 28);
             this.lblMinute.Name = "lblMinute";
-            this.lblMinute.Size = new System.Drawing.Size(92, 50);
+            this.lblMinute.Size = new System.Drawing.Size(80, 41);
             this.lblMinute.TabIndex = 5;
             this.lblMinute.Text = "00";
             // 
@@ -2888,18 +2900,6 @@
             // 
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // button209
-            // 
-            this.button209.Font = new System.Drawing.Font("DirtyBoy", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button209.ForeColor = System.Drawing.Color.Coral;
-            this.button209.Location = new System.Drawing.Point(369, 60);
-            this.button209.Name = "button209";
-            this.button209.Size = new System.Drawing.Size(195, 42);
-            this.button209.TabIndex = 13;
-            this.button209.Text = "Re generate";
-            this.button209.UseVisualStyleBackColor = true;
-            this.button209.Click += new System.EventHandler(this.button209_Click);
             // 
             // MainForm
             // 
